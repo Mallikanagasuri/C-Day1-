@@ -1,0 +1,16 @@
+#include<stdio.h>
+int main()
+{
+  int b[10],d,i=0;
+  printf("Enter a number:");
+  scanf("%d",&d);
+  while(d>0)
+  {
+  b[i++]=d%2;
+  d=d/2;
+  }
+  printf("\nThe binary form is:");
+  for(int j=i-1;j>=0;j--)
+      printf("%d",b[j]);  
+  return 0;
+}
