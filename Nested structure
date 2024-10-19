@@ -1,0 +1,51 @@
+#include<stdio.h>
+void main()
+{
+  int n;
+  printf("Enter how many details:");
+  scanf("%d",&n);
+  struct marks
+  {
+     int mark1;
+     int mark2;
+     int mark3;
+  };
+  struct Person
+  {
+     char Name[20];
+     int Age;
+     int Reg_no;
+     char Grade;
+     struct marks m;
+  };
+  struct Person details[10];
+  for(int i=0;i<n;i++)
+  {
+  printf("Enter the name:");
+  scanf("%s",&details[i].Name);
+  printf("Enter the age:");
+  scanf("%d",&details[i].Age);
+  printf("Enter the reg.no:");
+  scanf("%d",&details[i].Reg_no);
+  printf("Enter the grade:");
+  scanf("%s",&details[i].Grade);
+  printf("Enter the marks1:");
+  scanf("%d",&details[i].m.mark1);
+  printf("Enter the marks2:");
+  scanf("%d",&details[i].m.mark2);
+  printf("Enter the marks3:");
+  scanf("%d",&details[i].m.mark3);
+  printf("\n");
+  }
+  for(int i=0;i<n;i++)
+  {
+  printf("Name:%s\n",details[i].Name);
+  printf("Age:%d\n",details[i].Age);
+  printf("Reg_no:%d\n",details[i].Reg_no);
+  printf("Grade:%c\n",details[i].Grade);
+  printf("Marks1:%d\n",details[i].m.mark1);
+  printf("Marks2:%d\n",details[i].m.mark2);
+  printf("Marks3:%d\n",details[i].m.mark3);
+  printf("\n");
+  }
+}  
