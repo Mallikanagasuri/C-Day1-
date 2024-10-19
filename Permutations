@@ -1,0 +1,22 @@
+#include<stdio.h>
+int fact(int f);
+int main()
+{
+  int n,r,nu,de;
+  printf("How many students:");
+  scanf("%d",&n);
+  printf("\nHow many chairs:");
+  scanf("%d",&r);
+  nu=fact(n);
+  de=fact((n-r));
+  int p=(nu/de);
+  printf("The number of ways students can sit is %d",p);
+  return 0;
+}
+int fact(int f)
+{
+ if(f==1)
+   return f;
+ else
+   return f*fact(f-1);
+} 
